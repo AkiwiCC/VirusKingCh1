@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Slayer - Chapitre 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Icônes FontAwesome -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #f0f0f0; /* Faux blanc pour le texte */
+            display: flex;
+        }
+
+        /* Conteneur principal */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Barre de navigation à gauche */
+        .nav-bar {
+            width: 220px;
+            background-color: #222;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
+
+        .nav-bar a {
+            color: #f0f0f0; /* Faux blanc pour les liens */
+            font-size: 18px;
+            margin: 10px 0;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #444;
+        }
+
+        .nav-bar .home {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Titre du répertoire des chapitres */
+        .nav-bar .chapter-directory-btn {
+            margin-top: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            transition: color 0.3s ease;
+            padding: 12px;
+            color: #f0f0f0; /* Faux blanc pour le texte */
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+
+        .nav-bar .chapter-directory-btn:hover {
+            background-color: #444;
+        }
+
+        /* Répertoire des chapitres avec défilement vertical */
+        .chapter-directory {
+            display: none; /* Caché par défaut */
+            padding: 10px 0;
+            margin-top: 40px;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #222;
+        }
+
+        .chapter-directory a {
+            display: block;
+            margin: 10px;
+            padding: 12px;
+            background-color: #333;
+            color: #f0f0f0; /* Faux blanc pour les liens du répertoire */
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .chapter-directory a:hover {
+            background-color: #444;
+        }
+
+        /* Le checkbox caché pour afficher le répertoire */
+        #chapter-toggle {
+            display: none;
+        }
+
+        #chapter-toggle:checked + .chapter-directory-btn + .chapter-directory {
+            display: block; /* Affiche le répertoire quand le checkbox est coché */
+        }
+
+        /* Contenu principal */
+        .content {
+            margin-left: 240px;
+            width: calc(100% - 240px);
+            padding: 20px;
+            text-align: center;
+            overflow-y: auto;
+        }
+
+        .image-container {
+            width: 100%;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: #f0f0f0; /* Faux blanc pour le texte du footer */
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Barre de navigation à gauche -->
+<div class="nav-bar">
+    <a href="https://digital-rectangle-161412.framer.app/" class="home">Accueil</a>
+    <a href="chapter1.html">Chapitre Précédent</a>
+    <a href="chapter2.html">Chapitre Suivant</a>
+
+    <!-- Checkbox caché pour le contrôle d'affichage du répertoire -->
+    <input type="checkbox" id="chapter-toggle">
+    
+    <!-- Titre du répertoire des chapitres -->
+    <label for="chapter-toggle" class="chapter-directory-btn">
+        Répertoire des chapitres
+    </label>
+
+    <!-- Répertoire des chapitres avec défilement vertical -->
+    <div class="chapter-directory">
+        <a href="chapter02.html">Chapitre 02</a>
+        <a href="chapter03.html">Chapitre 03</a>
+        <a href="chapter04.html">Chapitre 04</a>
+        <a href="chapter05.html">Chapitre 05</a>
+        <a href="chapter06.html">Chapitre 06</a>
+        <a href="chapter07.html">Chapitre 07</a>
+        <a href="chapter08.html">Chapitre 08</a>
+        <a href="chapter09.html">Chapitre 09</a>
+        <a href="chapter10.html">Chapitre 10</a>
+        <a href="chapter11.html">Chapitre 11</a>
+        <a href="chapter12.html">Chapitre 12</a>
+        <a href="chapter13.html">Chapitre 13</a>
+        <a href="chapter14.html">Chapitre 14</a>
+        <a href="chapter15.html">Chapitre 15</a>
+        <a href="chapter16.html">Chapitre 16</a>
+        <a href="chapter17.html">Chapitre 17</a>
+        <a href="chapter18.html">Chapitre 18</a>
+        <a href="chapter19.html">Chapitre 19</a>
+        <a href="chapter20.html">Chapitre 20</a>
+        <a href="chapter21.html">Chapitre 21</a>
+        <a href="chapter22.html">Chapitre 22</a>
+        <a href="chapter23.html">Chapitre 23</a>
+        <a href="chapter24.html">Chapitre 24</a>
+        <a href="chapter25.html">Chapitre 25</a>
+        <a href="chapter26.html">Chapitre 26</a>
+        <a href="chapter27.html">Chapitre 27</a>
+        <a href="chapter28.html">Chapitre 28</a>
+        <a href="chapter29.html">Chapitre 29</a>
+        <a href="chapter30.html">Chapitre 30</a>
+    </div>
+</div>
+
+<!-- Contenu principal -->
+<div class="content">
+    <h1>Virus King - Chapitre 1</h1>
+    
+    <!-- Pages du chapitre 1 (de 02 à 24) -->
+    <div class="image-container">
+           <img src="images/01.jpg" alt="Page 01">
+    </div>
+    <div class="image-container">
+           <img src="images/02.jpg" alt="Page 02">
+    </div>
+    <div class="image-container">
+        <img src="images/03.jpg" alt="Page 03">
+    </div>
+    <div class="image-container">
+        <img src="images/04.jpg" alt="Page 04">
+    </div>
+    <div class="image-container">
+        <img src="images/05.jpg" alt="Page 05">
+    </div>
+    <div class="image-container">
+        <img src="images/06.jpg" alt="Page 06">
+    </div>
+    <div class="image-container">
+        <img src="images/07.jpg" alt="Page 07">
+    </div>
+    <div class="image-container">
+        <img src="images/08.jpg" alt="Page 08">
+    </div>
+    <div class="image-container">
+        <img src="images/09.jpg" alt="Page 09">
+    </div>
+    <div class="image-container">
+        <img src="images/10.jpg" alt="Page 10">
+    </div>
+    <div class="image-container">
+        <img src="images/11.jpg" alt="Page 11">
+    </div>
+    <div class="image-container">
+        <img src="images/12.jpg" alt="Page 12">
+    </div>
+    <div class="image-container">
+        <img src="images/13.jpg" alt="Page 13">
+    </div>
+    <div class="image-container">
+        <img src="images/14.jpg" alt="Page 14">
+    </div>
+    <div class="image-container">
+        <img src="images/15.jpg" alt="Page 15">
+    </div>
+    <div class="image-container">
+        <img src="images/16.jpg" alt="Page 16">
+    </div>
+    
+</body>
+</html>
